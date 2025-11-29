@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+.calendar-grid {
+  @apply grid grid-cols-7 gap-1 p-4;
+}
+
+.calendar-day {
+  @apply p-2 border border-gray-200 rounded-lg min-h-24 bg-white hover:bg-blue-50 transition-colors cursor-pointer;
+}
+
+.calendar-day.other-month {
+  @apply bg-gray-50 text-gray-400;
+}
+
+.calendar-day.today {
+  @apply bg-blue-100 border-blue-400;
+}
+
+.event-item {
+  @apply text-xs p-1 mb-1 rounded bg-blue-200 text-blue-900 truncate;
+}
+
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.modal-content {
+  @apply bg-white rounded-lg shadow-xl p-6 max-w-md w-full mx-4;
+}
+
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-gray-300 hover:bg-gray-400 text-gray-900 px-4 py-2 rounded-lg transition-colors;
+}
